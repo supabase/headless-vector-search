@@ -1,6 +1,6 @@
 ## Headless Vector Search
 
-Provides a vector/similarity search for any documentation site. It's [headless](https://en.wikipedia.org/wiki/Headless_software), so that you can build your own UI.
+Provides a vector/similarity search for any documentation site. It's [headless](https://en.wikipedia.org/wiki/Headless_software), so that you can integrate it into your existing website.
 
 ### How it works:
 

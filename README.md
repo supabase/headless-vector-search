@@ -16,20 +16,22 @@ Provides a vector/similarity search for any documentation site. It's [headless](
 
 ## Set-up
 
-1. Apply migrations to your hosted Supabase Project: `supabase db push`
-2. Set your OpenAI key as a secret: `supabase secrets set OPENAI_KEY=sk-xxx`
-3. Deploy `vector-search` Edge Function to your hosted Supabase Project: `supabase functions deploy --no-verify-jwt`
-4. Expose `docs` schema via API in Supabase Dashboard [settings](https://app.supabase.com/project/_/settings/api) > `API Settings` > `Exposed schemas`
-5. [Setup](https://github.com/supabase/supabase-vector-embeddings-github-action#use) `supabase-vector-embeddings` GitHub action in your Knowledge Base repo
+Start by creating a new Supabase Project: [database.new](https://database.new).
 
-You will see the embeddings populated in your database after the GitHub Action has run.
+1. Clone this repo 
+2. Link the repo to your remote project: `supabase link --project-ref XXX`
+3. Apply the database migrations: `supabase db push`
+4. Set your OpenAI key as a secret: `supabase secrets set OPENAI_KEY=sk-xxx`
+5. Deploy the Edge Functions: `supabase functions deploy --no-verify-jwt`
+6. Expose `docs` schema via API in Supabase Dashboard [settings](https://app.supabase.com/project/_/settings/api) > `API Settings` > `Exposed schemas`
+7. [Setup](https://github.com/supabase/supabase-vector-embeddings-github-action#use) `supabase-vector-embeddings` GitHub action in your Knowledge Base repo. You will see the embeddings populated in your database after the GitHub Action has run.
 
 ## Usage
 
 1. Find the URL for the `vector-search` Edge Function in the [Functions section](https://app.supabase.com/project/_/functions) of the Dashboard.
 2. Inside your appliction, you can send the user queries to this endpoint to receive a streamed response from OpenAI.
 
-#### Example with curl:
+#### Example with curl
 
 ```bash
  curl -i --location --request GET 'https://your-project-ref.functions.supabase.co/vector-search?query=What%27s+Supabase%3F'

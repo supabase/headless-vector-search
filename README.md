@@ -32,7 +32,7 @@ You will see the embeddings populated in your database after the GitHub Action h
 #### Example with curl:
 
 ```bash
- curl -i --location --request GET 'https://nihypcognmeejjrivnde.functions.supabase.co/vector-search?query=What%27s+Supabase%3F'
+ curl -i --location --request GET 'https://your-project-ref.functions.supabase.co/vector-search?query=What%27s+Supabase%3F'
 ```
 
 #### Example with [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
@@ -44,7 +44,7 @@ const onSubmit = (e: Event) => {
   isLoading.value = true
 
   const query = new URLSearchParams({ query: inputRef.current!.value })
-  const projectUrl = `https://nihypcognmeejjrivnde.functions.supabase.co`
+  const projectUrl = `https://your-project-ref.functions.supabase.co`
   const queryURL = `${projectURL}/${query}`
   const eventSource = new EventSource(queryURL)
 

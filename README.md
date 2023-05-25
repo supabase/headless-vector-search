@@ -10,7 +10,7 @@ Provides a vector/similarity search for any documentation site. It's [headless](
 
 #### Tech stack:
 
-- Supabase: Database & Edge Function.
+- Supabase: Database & Edge Functions.
 - OpenAI: Embeddings and completions.
 - GitHub Actions: for ingesting your markdown docs.
 

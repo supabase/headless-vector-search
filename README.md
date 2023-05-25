@@ -2,13 +2,13 @@
 
 Provides a vector/similarity search for any documentation site. It's [headless](https://en.wikipedia.org/wiki/Headless_software), so that you can integrate it into your existing website.
 
-### How it works:
+#### How it works:
 
 - This repo initializes a new `docs` schema inside your database.
 - The accompanying [GitHub Action](https://github.com/supabase/supabase-vector-embeddings-github-action) ingests your markdown docs into your database as embeddings.
 - This repo provides an Edge Function that handles user queries, converting them into ChatGPT-like responses.
 
-### Tech stack:
+#### Tech stack:
 
 - Supabase: Database & Edge Function.
 - OpenAI: Embeddings and completions.

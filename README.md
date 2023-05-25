@@ -31,13 +31,18 @@ Start by creating a new Supabase Project: [database.new](https://database.new).
 1. Find the URL for the `vector-search` Edge Function in the [Functions section](https://app.supabase.com/project/_/functions) of the Dashboard.
 2. Inside your appliction, you can send the user queries to this endpoint to receive a streamed response from OpenAI.
 
-#### Example with curl
+<details>
+ <summary>See cURL example</summary>
 
 ```bash
  curl -i --location --request GET 'https://your-project-ref.functions.supabase.co/vector-search?query=What%27s+Supabase%3F'
 ```
 
-#### Example with [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
+</details>
+
+<details>
+ <summary>See <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventSource">EventSource</a> example</summary>
+
 
 ```ts
 const onSubmit = (e: Event) => {
@@ -72,6 +77,9 @@ const onSubmit = (e: Event) => {
   isLoading.value = true
 }
 ```
+
+</details>
+
 
 ## Showcase
 

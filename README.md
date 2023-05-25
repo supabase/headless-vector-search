@@ -73,6 +73,10 @@ const onSubmit = (e: Event) => {
 }
 ```
 
+## Showcase
+
+- [docs.supabase.com](https://supabase.com/docs) - Use <kbd>cmd+k</kbd> to access.
+
 ## License
 
 MIT

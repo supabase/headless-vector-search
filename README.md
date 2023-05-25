@@ -11,7 +11,7 @@
 - Make a query request
 
 ```bash
- curl -i --location --request GET 'https://nihypcognmeejjrivnde.functions.supabase.co/vector-search?query=What%27s+Supabase%3F'
+ curl -i --location --request GET 'https://your-project-ref.functions.supabase.co/vector-search?query=What%27s+Supabase%3F'
 ```
 
 or with [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource)
@@ -24,7 +24,7 @@ const onSubmit = (e: Event) => {
 
   const query = new URLSearchParams({ query: inputRef.current!.value });
   const eventSource = new EventSource(
-    `https://nihypcognmeejjrivnde.functions.supabase.co/vector-search?${query}`
+    `https://your-project-ref.functions.supabase.co/vector-search?${query}`
   );
 
   eventSource.addEventListener("error", (err) => {

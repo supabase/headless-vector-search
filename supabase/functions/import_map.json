@@ -1,6 +1,6 @@
 {
   "imports": {
-    "commmon-tags": "https://esm.sh/common-tags@1.8.2",
+    "common-tags": "https://esm.sh/common-tags@1.8.2",
     "gpt3-tokenizer": "https://esm.sh/gpt3-tokenizer@1.1.5",
     "openai": "https://esm.sh/openai@3.2.1",
     "preact": "https://esm.sh/preact@10.13.2",

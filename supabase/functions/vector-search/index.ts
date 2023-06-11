@@ -1,7 +1,7 @@
 import "xhr";
 import { serve } from "std/http/server.ts";
 import { createClient } from "@supabase/supabase-js";
-import { codeBlock, oneLine } from "commmon-tags";
+import { codeBlock, oneLine } from "common-tags";
 import GPT3Tokenizer from "gpt3-tokenizer";
 import { Configuration, CreateCompletionRequest, OpenAIApi } from "openai";
 import { ensureGetEnv } from "../_utils/env.ts";

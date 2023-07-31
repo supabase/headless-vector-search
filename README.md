@@ -35,7 +35,7 @@ Start by creating a new Supabase Project: [database.new](https://database.new).
  <summary>See cURL example</summary>
 
 ```bash
- curl -i --location --request GET 'https://your-project-ref.functions.supabase.co/vector-search?query=What%27s+Supabase%3F'
+ curl -i --location --request GET 'https://your-project-ref.functions.supabase.co/functions/v1/vector-search?query=What%27s+Supabase%3F'
 ```
 
 </details>
@@ -51,7 +51,7 @@ const onSubmit = (e: Event) => {
   isLoading.value = true
 
   const query = new URLSearchParams({ query: inputRef.current!.value })
-  const projectUrl = `https://your-project-ref.functions.supabase.co`
+  const projectUrl = `https://your-project-ref.functions.supabase.co/functions/v1/vector-search`
   const queryURL = `${projectURL}/${query}`
   const eventSource = new EventSource(queryURL)
 

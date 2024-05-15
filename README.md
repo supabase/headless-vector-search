@@ -21,7 +21,7 @@ Start by creating a new Supabase Project: [database.new](https://database.new).
 1. Clone this repo 
 2. Link the repo to your remote project: `supabase link --project-ref XXX`
 3. Apply the database migrations: `supabase db push`
-4. Set your OpenAI key as a secret: `supabase secrets set OPENAI_KEY=sk-xxx`
+4. Set your OpenAI key as a secret: `supabase secrets set OPENAI_API_KEY=sk-xxx`
 5. Deploy the Edge Functions: `supabase functions deploy --no-verify-jwt`
 6. Expose `docs` schema via API in Supabase Dashboard [settings](https://app.supabase.com/project/_/settings/api) > `API Settings` > `Exposed schemas`
 7. [Setup](https://github.com/supabase/supabase-vector-embeddings-github-action#use) `supabase-vector-embeddings` GitHub action in your Knowledge Base repo. You will see the embeddings populated in your database after the GitHub Action has run.

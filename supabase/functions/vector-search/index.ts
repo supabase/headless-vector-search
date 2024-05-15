@@ -7,14 +7,14 @@ import { Configuration, CreateCompletionRequest, OpenAIApi } from "openai";
 import { ensureGetEnv } from "../_utils/env.ts";
 import { ApplicationError, UserError } from "../_utils/errors.ts";
 
-const OPENAI_KEY = ensureGetEnv("OPENAI_KEY");
+const OPENAI_API_KEY = ensureGetEnv("OPENAI_API_KEY");
 const SUPABASE_URL = ensureGetEnv("SUPABASE_URL");
 const SUPABASE_SERVICE_ROLE_KEY = ensureGetEnv("SUPABASE_SERVICE_ROLE_KEY");
 
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
   db: { schema: "docs" },
 });
-const openAiConfiguration = new Configuration({ apiKey: OPENAI_KEY });
+const openAiConfiguration = new Configuration({ apiKey: OPENAI_API_KEY });
 const openai = new OpenAIApi(openAiConfiguration);
 
 export const corsHeaders = {
@@ -127,7 +127,7 @@ serve(async (req) => {
     // The Fetch API allows for easier response streaming over the OpenAI client.
     const response = await fetch("https://api.openai.com/v1/completions", {
       headers: {
-        Authorization: `Bearer ${OPENAI_KEY}`,
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
         "Content-Type": "application/json",
       },
       method: "POST",
